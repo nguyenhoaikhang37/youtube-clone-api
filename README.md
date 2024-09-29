@@ -34,7 +34,7 @@ Thêm một phản ứng vào bình luận.
 
 - Tham số:
   - `commentId` (chuỗi): ID của bình luận cần thêm phản ứng.
-  - `type` (chuỗi): Loại phản ứng (ví dụ: "thích", "haha", v.v.).
+  - `type` (chuỗi): Loại phản ứng bao gồm ("like", "haha", "sad", "angry", "love")
 - Phản hồi:
   - Một đối tượng JSON đại diện cho bình luận đã cập nhật, chứa `id`, `content`, `author`, `parentComment`, `replies`, và `reactions`.
 
@@ -121,4 +121,5 @@ Lấy danh sách các kênh mà người dùng đã xác thực đã đăng ký.
 ## Xác thực
 
 API này sử dụng JSON Web Tokens (JWT) để xác thực. Khi người dùng đăng nhập, một token JWT được tạo ra và trả về trong phản hồi. Token này phải được bao gồm trong header Authorization của tất cả các yêu cầu tiếp theo.
+
 # youtube-clone-api
