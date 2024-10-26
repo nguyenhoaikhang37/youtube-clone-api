@@ -12,13 +12,17 @@ const videoSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    fileUrl: {
-      type: String,
-      required: true,
-    },
     thumbnailUrl: {
       type: String,
       default: "",
+    },
+    videoId: {
+      type: String,
+      required: false,
+    },
+    fileUrl: {
+      type: String,
+      required: false,
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,

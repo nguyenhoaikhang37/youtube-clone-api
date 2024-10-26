@@ -4,7 +4,7 @@ const videoController = require("../controllers/videoController");
 const auth = require("../middleware/auth");
 const upload = require("../middleware/upload");
 
-router.post("/", auth, upload.single("video"), videoController.uploadVideo);
+router.post("/", auth, videoController.uploadVideo);
 router.get("/", videoController.getVideos);
 router.get("/:id", videoController.getVideoById);
 

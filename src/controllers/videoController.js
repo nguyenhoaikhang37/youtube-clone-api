@@ -2,13 +2,14 @@ const Video = require("../models/Video");
 
 exports.uploadVideo = async (req, res) => {
   try {
-    const { title, description, tags } = req.body;
+    const { title, description, tags, videoId , fileUrl} = req.body;
     const newVideo = new Video({
       title,
       description,
-      fileUrl: req.file.path,
       owner: req.user._id,
       tags: tags ? tags.split(",").map((tag) => tag.trim()) : [],
+      fileUrl,
+      videoId,
     });
     await newVideo.save();
     res.status(201).json(newVideo);
